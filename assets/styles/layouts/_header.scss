@@ -29,7 +29,7 @@ body.proudcity-intranet {
       border: none;
       max-width: 600px;
       position: absolute;
-      top: -80px;
+      top: -70px;
       right: 0;
       
       .group-description {
@@ -37,6 +37,7 @@ body.proudcity-intranet {
         border: none;
         box-shadow: none;
         text-align: right;
+        padding: 0;
       }
     }
   }
@@ -66,4 +67,8 @@ body.proudcity-intranet {
   #item-body {
     margin-top: 10px;
   }
+  .buddypress-wrap:not(.bp-vertical-navs) .main-navs.single-screen-navs > ul > li:first-child a {
+    padding-left: 10px;
+  }
+  
 }
