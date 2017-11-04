@@ -42,6 +42,15 @@ function add_assets() {
   }
   // Optional: override default fonts
   //wp_enqueue_style('external-fonts', '//fonts.googleapis.com/css?family=Lato:400,900,700,300');
+
+
+  // Front-end pages that use Backbone break with lodash because it overwrides Underscore function names.
+  // @todo: find a better long-term solution
+  global $wp;
+  if (strpos($wp->request, '/buddydrive') !== false || strpos($wp->request, '/admin/group-') !== false) {
+    wp_deregister_script('lodash');
+  }
+
 }
 add_action( 'wp_enqueue_scripts',  __NAMESPACE__ . '\\add_assets', 101);
 
