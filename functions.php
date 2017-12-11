@@ -58,7 +58,7 @@ add_action( 'wp_enqueue_scripts',  __NAMESPACE__ . '\\add_assets', 101);
 /**
  * Register sidebars
  */
-function wp_proud_theme_buddypress_widgets_init() {
+function wp_proud_theme_intranet_widgets_init() {
 
     register_sidebar([
         'name'          => __('Header navigation', 'proud'),
@@ -75,4 +75,12 @@ function wp_proud_theme_buddypress_widgets_init() {
     ]);
 
 }
-add_action('widgets_init', 'wp_proud_theme_buddypress_widgets_init');
+add_action('widgets_init', 'wp_proud_theme_intranet_widgets_init');
+
+
+// Enable BBPress wysiwyg
+function bbp_enable_visual_editor( $args = array() ) {
+    $args['tinymce'] = true;
+    return $args;
+}
+add_filter( 'bbp_after_get_the_content_parse_args', 'bbp_enable_visual_editor' );

@@ -1,4 +1,4 @@
-body.proudcity-intranet {
+body.proud-intranet {
   padding-top: 47px !important;
   
   .container>.below {
@@ -79,5 +79,47 @@ body.proudcity-intranet {
   .bp-list li .item .list-title {
     font-weight: bold;
   }
+  
+  #buddypress {
+    
+    #item-body {
+      margin-top: 0 !important;
+    }
+    
+    div.item-list-tabs ul li {
+      a {
+        padding: 8px 10px;
+      }
+      
+      &.current a,
+      &.selected a {
+        color: $black;
+      }
+    }
+  
+    div.item-list-tabs#subnav {
+      background-color: $gray-lightest;
+      margin-top: 0;
+      
+      li a {
+        padding: 8px 15px;
+      }
+      
+      input[type="text"],
+      select {
+        margin: 3px 5px;
+      }
+  
+      li.current a,
+      li.selected a {
+        background-color: $gray-light;
+      }
+    }
+    
+  }
+  
+  
+  
+  
   
 }
